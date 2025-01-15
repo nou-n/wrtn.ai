@@ -154,7 +154,7 @@ export class Chat {
                 const chatRoomData = chatRoomRequest.data;
                 if(chatRoomData["result"] == "SUCCESS") {
                     await this.waitForSocketConnection();
-                    console.log(chatRoomData["data"]);
+                    // console.log(chatRoomData["data"]);
                     this.chatId = chatRoomData["data"]["_id"];
                     this.sendSocket("42/v1/chat", [
                         "enterChat", {
